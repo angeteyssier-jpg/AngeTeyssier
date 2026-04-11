@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portail de Liens</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px 0;
+            margin: 15px 0;
+            background-color: #0091ff; /* Bleu Infomaniak/Standard */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s;
+            box-sizing: border-box; /* Inclut le padding dans la largeur */
+        }
+        .btn:hover {
+            background-color: #0073cc;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+        .btn-success {
+            background-color: #28a745;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Bienvenue sur mon Portail</h1>
+        
+        <!-- Bouton 1 : Lien principal -->
+        <a href="https://www.votre-site-principal.com" class="btn" target="_blank">
+            Visiter mon Site Web
+        </a>
+
+        <!-- Bouton 2 : Lien secondaire -->
+        <a href="https://www.votre-blog.com" class="btn btn-success" target="_blank">
+            Lire mon Blog
+        </a>
+
+        <!-- Bouton 3 : Lien tiers -->
+        <a href="https://www.votre-contact.com" class="btn btn-secondary" target="_blank">
+            Nous Contacter
+        </a>
+    </div>
+
+</body>
+</html>
