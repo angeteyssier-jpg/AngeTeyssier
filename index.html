@@ -3,81 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portail de Liens</title>
+    <title>Mon Tableau de Bord</title>
     <style>
+        /* --- STYLE GÉNÉRAL --- */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f6f8;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* --- ZONE TITRE --- */
+        header {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- GRILLE DE BOUTONS (RESPONSIVE) --- */
+        .button-grid {
+            display: grid;
+            /* Crée automatiquement autant de colonnes que possible avec une largeur min de 150px */
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px; /* Largeur max pour ne pas trop étaler sur grands écrans */
+            padding-bottom: 50px;
+        }
+
+        /* --- STYLE DES BOUTONS --- */
+        .nav-btn {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background-color: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 30px;
-            font-size: 24px;
-        }
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 15px 0;
-            margin: 15px 0;
-            background-color: #0091ff; /* Bleu Infomaniak/Standard */
-            color: white;
+            height: 80px;
             text-decoration: none;
-            border-radius: 8px;
+            color: white;
             font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s;
-            box-sizing: border-box; /* Inclut le padding dans la largeur */
+            font-size: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            word-wrap: break-word; /* Permet au texte de passer à la ligne si trop long */
         }
-        .btn:hover {
-            background-color: #0073cc;
-            transform: translateY(-2px);
+
+        .nav-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+            filter: brightness(1.1);
         }
-        .btn-secondary {
-            background-color: #6c757d;
-        }
-        .btn-secondary:hover {
-            background-color: #5a6268;
-        }
-        .btn-success {
-            background-color: #28a745;
-        }
-        .btn-success:hover {
-            background-color: #218838;
-        }
+
+        /* --- COULEURS PAR DÉFAUT (Modifiables individuellement plus bas) --- */
+        .color-1 { background-color: #3498db; } /* Bleu */
+        .color-2 { background-color: #e74c3c; } /* Rouge */
+        .color-3 { background-color: #2ecc71; } /* Vert */
+        .color-4 { background-color: #f1c40f; color: #333; } /* Jaune (texte foncé) */
+        .color-5 { background-color: #9b59b6; } /* Violet */
+        .color-6 { background-color: #34495e; } /* Bleu nuit */
+        .color-7 { background-color: #e67e22; } /* Orange */
+        .color-8 { background-color: #1abc9c; } /* Turquoise */
+        .color-9 { background-color: #95a5a6; } /* Gris */
+        .color-10 { background-color: #d35400; } /* Citrouille */
+
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Bienvenue sur mon Portail</h1>
+    <!-- ZONE TITRE -->
+    <header>
+        <h1>Mon Portail de Liens</h1>
+    </header>
+
+    <!-- GRILLE DES 20 BOUTONS -->
+    <div class="button-grid">
+
+        <!-- INSTRUCTIONS POUR MODIFIER :
+             1. href="#" -> Remplacez # par votre lien (ex: href="https://google.com")
+             2. class="nav-btn color-1" -> Changez le numéro (color-1 à color-10) pour changer la couleur
+             3. Le texte entre > et < est le nom du bouton
+        -->
+
+        <!-- Bouton 1 -->
+        <a href="#" class="nav-btn color-1">Lien 1</a>
+        <!-- Bouton 2 -->
+        <a href="#" class="nav-btn color-2">Lien 2</a>
+        <!-- Bouton 3 -->
+        <a href="#" class="nav-btn color-3">Lien 3</a>
+        <!-- Bouton 4 -->
+        <a href="#" class="nav-btn color-4">Lien 4</a>
+        <!-- Bouton 5 -->
+        <a href="#" class="nav-btn color-5">Lien 5</a>
+        <!-- Bouton 6 -->
+        <a href="#" class="nav-btn color-6">Lien 6</a>
+        <!-- Bouton 7 -->
+        <a href="#" class="nav-btn color-7">Lien 7</a>
+        <!-- Bouton 8 -->
+        <a href="#" class="nav-btn color-8">Lien 8</a>
+        <!-- Bouton 9 -->
+        <a href="#" class="nav-btn color-9">Lien 9</a>
+        <!-- Bouton 10 -->
+        <a href="#" class="nav-btn color-10">Lien 10</a>
         
-        <!-- Bouton 1 : Lien principal -->
-        <a href="https://www.votre-site-principal.com" class="btn" target="_blank">
-            Visiter mon Site Web
-        </a>
+        <!-- Bouton 11 (Répétition des couleurs pour l'exemple) -->
+        <a href="#" class="nav-btn color-1">Lien 11</a>
+        <!-- Bouton 12 -->
+        <a href="#" class="nav-btn color-2">Lien 12</a>
+        <!-- Bouton 13 -->
+        <a href="#" class="nav-btn color-3">Lien 13</a>
+        <!-- Bouton 14 -->
+        <a href="#" class="nav-btn color-4">Lien 14</a>
+        <!-- Bouton 15 -->
+        <a href="#" class="nav-btn color-5">Lien 15</a>
+        <!-- Bouton 16 -->
+        <a href="#" class="nav-btn color-6">Lien 16</a>
+        <!-- Bouton 17 -->
+        <a href="#" class="nav-btn color-7">Lien 17</a>
+        <!-- Bouton 18 -->
+        <a href="#" class="nav-btn color-8">Lien 18</a>
+        <!-- Bouton 19 -->
+        <a href="#" class="nav-btn color-9">Lien 19</a>
+        <!-- Bouton 20 -->
+        <a href="#" class="nav-btn color-10">Lien 20</a>
 
-        <!-- Bouton 2 : Lien secondaire -->
-        <a href="https://www.votre-blog.com" class="btn btn-success" target="_blank">
-            Lire mon Blog
-        </a>
-
-        <!-- Bouton 3 : Lien tiers -->
-        <a href="https://www.votre-contact.com" class="btn btn-secondary" target="_blank">
-            Nous Contacter
-        </a>
     </div>
 
 </body>
